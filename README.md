@@ -1,6 +1,7 @@
 # ESS 배터리 수명 예측
 
-ESS 셀 교체 비용은 설비 CAPEX의 30~40%를 차지합니다. 이 프로젝트는 충방전 초기 100사이클 데이터만으로 배터리 셀의 총수명(cycle life)을 예측해, 교체·조달 시점을 미리 계획하고 수명이 짧을 셀을 일찍 골라내는 것을 목표로 합니다.
+ESS 셀 교체 비용은 설비 CAPEX의 30~40%를 차지합니다. 
+이 프로젝트는 충방전 초기 100사이클 데이터만으로 배터리 셀의 총수명(cycle life)을 예측하여, 교체·조달 시점을 미리 계획하고 수명이 짧을 셀을 조기 선별해내는 방향성을 가집니다.
 
 ## 프로젝트 개요
 
@@ -78,11 +79,11 @@ python src/train.py
 #    다시 실행하려면 VS Code 또는 Jupyter에서 notebooks/ 의 파일을 열고 전체 실행하세요.
 ```
 
-시드는 `src/config.py`의 `SEED = 42` 하나로 고정했고, Hold-out 정책·CV fold·모델 난수 모두 이 값에서 나옵니다.
+시드는 `src/config.py`의 `SEED = 42` 하나로 고정했고, Hold-out 정책·CV fold·모델 난수 모두 이 곳에서 알 수 있습니다.
 
 ## EDA
 
-자세한 그림과 수치는 `notebooks/01_EDA.ipynb`, DAY 1 발표자료에 있습니다.
+자세한 그림과 수치는 `notebooks/01_EDA.ipynb` 발표자료에 첨부되어 있습니다.
 
 - Cycle Life 분포
   - Batch 1 534~2,237 (중앙 842), Batch 2 392~1,186 (중앙 472, 72%가 500 미만), Batch 3 541~1,935 (중앙 965)
@@ -90,7 +91,7 @@ python src/train.py
 - 열화 곡선 분석
   - 장수명·단수명 셀의 초기 100사이클 용량은 겹치고(초기 평균 용량–수명 ρ 0.1~0.3), 차이는 이후에 벌어집니다.
   - Knee point : 수명의 약 77% 시점, 가장 이른 knee도 244사이클로 입력 구간 이후입니다. 마지막 20% 구간의 감소 기울기는 전체 평균의 약 3.3~3.5배입니다.
-  - 핵심 발견 : 용량 값만으로는 100사이클 시점에 수명을 구분하기 어렵습니다. knee는 수명과 사실상 같은 정보라 입력에 넣으면 누수입니다.
+  - 핵심 발견 : 용량 값만으로는 100사이클 시점에 수명을 구분하기 어렵습니다. knee는 수명과 사실상 같은 정보라 입력에 넣으면 leak가 발생합니다.
 - ΔQ(V) 곡선 분석
   - ΔQ(V) = Q100(V) − Q10(V). 단수명 셀일수록 3.0V 부근의 골이 깊고 넓습니다.
   - 핵심 발견 : log10 Var(ΔQ)와 수명은 세 배치 모두 강한 음의 상관(ρ −0.88 / −0.71 / −0.76)이며 log–log 평면에서 거의 직선입니다.
@@ -117,7 +118,7 @@ python src/train.py
 
 ### 피처 엔지니어링 전략
 
-모든 피처는 사이클 100까지의 기록만 씁니다(`src/features.py`).
+모든 피처는 사이클 100까지의 기록만을 사용합니다.(`src/features.py`).
 
 | 피처 | 정의 | EDA 근거 |
 |---|---|---|
@@ -135,7 +136,7 @@ python src/train.py
 - 후보 모델 : M0 중앙값 기준선, M1 단일 피처 선형회귀, M2 ElasticNet, M3 Huber, M4 Gaussian Process(선형+RBF 커널), M5 RandomForest·LightGBM
 - 최종 모델 : ElasticNet (alpha=0.001, l1_ratio=0.9) + F1 피처셋 (`dq_logvar`, `qd_mean`, `qd_slope`)
 - 선택 이유 :
-  - Batch 1 CV에서 F1 조합이 모든 선형 계열에서 가장 좋았습니다(ElasticNet 7.33%, Huber 7.48%, GP 7.68%). 단일 피처(F0)는 10.70%, 저항·온도를 더한 F2는 10.26%, 정책까지 더한 F3는 10.57%로 오히려 나빴습니다.
+  - Batch 1 CV에서 F1 조합이 모든 선형 계열에서 가장 좋았습니다.(ElasticNet 7.33%, Huber 7.48%, GP 7.68%). 단일 피처(F0)는 10.70%, 저항·온도를 더한 F2는 10.26%, 정책까지 더한 F3는 10.57%로 오히려 나빴습니다.
   - 트리 계열은 RandomForest 13.15%, LightGBM 15.91%로 소표본(학습 32셀)에서 가장 나빴고, 구조상 학습 범위 밖을 예측하지 못합니다.
   - 선형 계열은 log–log 직선 관계(Q3)를 그대로 쓰고 범위 밖으로 외삽할 수 있으며, ElasticNet은 L1·L2 규제로 공선성과 소표본 과적합에 대응합니다.
   - 표준화 계수(log10 수명): `dq_logvar` −0.157, `qd_mean` +0.032, `qd_slope` −0.016. ΔQ가 예측을 주도합니다.
@@ -145,7 +146,7 @@ python src/train.py
 
 ## 성능 결과
 
-고정 모델(Development 32셀로 학습)로 한 번씩 평가했습니다. Gap은 (+)가 성능 저하가 되도록 계산했습니다.
+고정 모델(Development 32셀로 학습)로 1회 씩만 평가했습니다. Gap은 (+)가 성능 저하가 되도록 계산했습니다.
 
 | 구분 | MAPE (%) | 비고 |
 |---|---:|---|
@@ -232,6 +233,6 @@ python src/train.py
 - 원논문 데이터 처리 코드 : https://github.com/rdbraatz/data-driven-prediction-of-battery-cycle-life-before-capacity-degradation (`Load Data.ipynb`, `LoadData.m`)
 - 데이터 : https://www.kaggle.com/datasets/itshpark/data-driven-prediction-of-battery-cycle (원출처 https://data.matr.io/1/)
 
-## 팀 구성
+## 팀 구성(개인과제)
 
-- 조승현 (SKALA 4기 울산캠퍼스 1반) : EDA, 피처 엔지니어링, 모델 개발, 성능 평가(Batch 2·3), 오류 분석
+- 조승현 (SKALA 4기 울산캠퍼스 1반) : EDA, 피처 엔지니어링, 모델 개발, 성능 평가(Batch 2·3), 오류 분석 [Total Process]
