@@ -1,0 +1,17 @@
+[
+  {
+    "batch": "Batch 1",
+    "file": "2017-05-12_batchdata_updated_struct_errorcorrect.mat",
+    "bytes": 3025320241
+  },
+  {
+    "batch": "Batch 2",
+    "file": "2018-02-20_batchdata_updated_struct_errorcorrect.mat",
+    "bytes": 2022599329
+  },
+  {
+    "batch": "Batch 3",
+    "file": "2018-04-12_batchdata_updated_struct_errorcorrect.mat",
+    "bytes": 3236690412
+  }
+]

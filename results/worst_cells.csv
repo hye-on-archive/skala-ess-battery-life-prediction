@@ -1,0 +1,16 @@
+cell_uid,batch,policy,structure,dq_logvar,y_true,set,y_pred,pct_err,life_in_train_range,feature_in_train_range,abs_err
+b2c009,Batch 2,5.6C(26%)-4.5C-newstructure,new,-4.34,791.0,Batch 2,1552.21,96.23,True,True,96.23
+b2c044,Batch 2,5.2C(58%)-4C-newstructure,new,-4.36,841.0,Batch 2,1547.86,84.05,True,True,84.05
+b2c032,Batch 2,4.8C(80%)-4.8C-newstructure,new,-4.13,809.0,Batch 2,1297.08,60.33,True,True,60.33
+b2c043,Batch 2,4.8C(80%)-4.8C-newstructure,new,-4.27,1029.0,Batch 2,1614.22,56.87,True,True,56.87
+b2c005,Batch 2,3.6C(30%)-6C,standard,-3.09,416.0,Batch 2,642.06,54.34,False,False,54.34
+b3c038,Batch 3,5C(67%)-4C-newstructure,new,-4.34,1935.0,Batch 3,1144.44,-40.86,True,True,40.86
+b3c007,Batch 3,4.8C(80%)-4.8C-newstructure,new,-4.49,1836.0,Batch 3,1268.04,-30.93,True,True,30.93
+b3c040,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.3,796.0,Batch 3,1017.85,27.87,True,True,27.87
+b3c045,Batch 3,4.8C(80%)-4.8C-newstructure,new,-4.52,1801.0,Batch 3,1306.5,-27.46,True,True,27.46
+b3c022,Batch 3,5.9C(60%)-3.1C-newstructure,new,-4.05,1002.0,Batch 3,786.57,-21.5,True,True,21.5
+b1c020,Batch 1,5.4C(80%)-5.4C,standard,-3.37,534.0,Valid,636.58,19.21,False,False,19.21
+b1c024,Batch 1,6C(40%)-3C,standard,-3.94,1017.0,Valid,839.37,-17.47,True,True,17.47
+b1c021,Batch 1,5.4C(80%)-5.4C,standard,-3.35,559.0,Valid,623.51,11.54,False,False,11.54
+b1c033,Batch 1,6C(60%)-3C,standard,-3.67,757.0,Valid,826.38,9.16,True,True,9.16
+b1c025,Batch 1,6C(40%)-3C,standard,-4.03,854.0,Valid,920.8,7.82,True,True,7.82

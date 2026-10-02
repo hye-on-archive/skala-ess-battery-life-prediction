@@ -1,0 +1,3 @@
+trained_on,set,n,MAPE,MAE,RMSE,bias_pct,over_share
+Batch 1 all (41),Batch 2,39,38.648,215.121,257.451,38.648,100.0
+Batch 1 all (41),Batch 3,40,10.435,125.605,202.953,-6.399,35.0

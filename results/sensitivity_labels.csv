@@ -1,0 +1,4 @@
+variant,n_B1,n_dev,n_B3,cv_mean,Valid MAPE,Batch 2 MAPE,Batch 3 MAPE
+paper_rules,41,32,40,7.33,8.44,35.3,9.87
+provided_labels,46,37,44,9.83,7.2,53.63,19.34
+exclude_10,36,27,40,6.64,8.93,35.38,10.82

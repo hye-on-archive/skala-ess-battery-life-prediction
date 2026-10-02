@@ -1,0 +1,89 @@
+cell_uid,batch,policy,structure,dq_logvar,y_true,set,y_pred,pct_err,life_in_train_range,feature_in_train_range
+b1c005,Batch 1,4.4C(80%)-4.4C,standard,-4.179,1074.0,Valid,1038.144,-3.339,True,True
+b1c020,Batch 1,5.4C(80%)-5.4C,standard,-3.367,534.0,Valid,636.582,19.21,False,False
+b1c021,Batch 1,5.4C(80%)-5.4C,standard,-3.35,559.0,Valid,623.507,11.54,False,False
+b1c024,Batch 1,6C(40%)-3C,standard,-3.939,1017.0,Valid,839.372,-17.466,True,True
+b1c025,Batch 1,6C(40%)-3C,standard,-4.028,854.0,Valid,920.801,7.822,True,True
+b1c026,Batch 1,6C(40%)-3.6C,standard,-3.795,870.0,Valid,867.926,-0.238,True,True
+b1c027,Batch 1,6C(40%)-3.6C,standard,-3.854,842.0,Valid,832.792,-1.094,True,True
+b1c032,Batch 1,6C(60%)-3C,standard,-3.646,731.0,Valid,686.754,-6.053,True,True
+b1c033,Batch 1,6C(60%)-3C,standard,-3.667,757.0,Valid,826.377,9.165,True,True
+b2c000,Batch 2,5.2C(58%)-4C,standard,-3.487,477.0,Batch 2,708.529,48.539,False,True
+b2c001,Batch 2,5.6C(26%)-4.5C,standard,-3.298,491.0,Batch 2,655.652,33.534,False,False
+b2c002,Batch 2,5.2C(50%)-4.25C,standard,-3.46,424.0,Batch 2,532.119,25.5,False,True
+b2c003,Batch 2,4.65C(44%)-5C,standard,-3.496,499.0,Batch 2,600.11,20.262,False,True
+b2c004,Batch 2,4.65C(69%)-6C,standard,-3.233,444.0,Batch 2,552.985,24.546,False,False
+b2c005,Batch 2,3.6C(30%)-6C,standard,-3.086,416.0,Batch 2,642.063,54.342,False,False
+b2c006,Batch 2,3.6C(9%)-5C,standard,-3.53,393.0,Batch 2,590.088,50.15,False,True
+b2c007,Batch 2,4.8C(80%)-4.8C-newstructure,new,-4.232,777.0,Batch 2,1092.992,40.668,True,True
+b2c008,Batch 2,5.2C(58%)-4C-newstructure,new,-4.102,904.0,Batch 2,1203.059,33.082,True,True
+b2c009,Batch 2,5.6C(26%)-4.5C-newstructure,new,-4.344,791.0,Batch 2,1552.214,96.234,True,True
+b2c010,Batch 2,4.8C(80%)-4.8C,standard,-3.451,492.0,Batch 2,648.867,31.883,False,True
+b2c011,Batch 2,5.2C(50%)-4.25C,standard,-3.485,449.0,Batch 2,529.633,17.958,False,True
+b2c012,Batch 2,4.65C(44%)-5C,standard,-3.168,466.0,Batch 2,505.246,8.422,False,False
+b2c013,Batch 2,4.65C(69%)-6C,standard,-3.344,460.0,Batch 2,589.098,28.065,False,False
+b2c014,Batch 2,3.6C(30%)-6C,standard,-3.119,426.0,Batch 2,504.765,18.489,False,False
+b2c015,Batch 2,3.6C(9%)-5C,standard,-3.516,396.0,Batch 2,457.675,15.575,False,True
+b2c016,Batch 2,4.8C(80%)-4.8C,standard,-3.495,472.0,Batch 2,706.952,49.778,False,True
+b2c017,Batch 2,5.6C(26%)-4.5C,standard,-3.5,471.0,Batch 2,603.604,28.154,False,True
+b2c018,Batch 2,5.2C(50%)-4.25C,standard,-3.707,449.0,Batch 2,556.255,23.887,False,True
+b2c019,Batch 2,6C(60%)-3C,standard,-3.292,392.0,Batch 2,536.991,36.987,False,False
+b2c020,Batch 2,5.2C(58%)-4C,standard,-3.441,489.0,Batch 2,624.141,27.636,False,True
+b2c021,Batch 2,6C(60%)-3C,standard,-3.327,408.0,Batch 2,556.222,36.329,False,False
+b2c024,Batch 2,4.8C(80%)-4.8C,standard,-3.641,514.0,Batch 2,697.622,35.724,False,True
+b2c025,Batch 2,5.2C(58%)-4C,standard,-3.534,493.0,Batch 2,678.514,37.63,False,True
+b2c026,Batch 2,5.6C(26%)-4.5C,standard,-3.222,450.0,Batch 2,579.148,28.7,False,False
+b2c027,Batch 2,5.2C(50%)-4.25C,standard,-3.486,474.0,Batch 2,566.82,19.582,False,True
+b2c028,Batch 2,4.8C(80%)-4.8C,standard,-3.423,437.0,Batch 2,556.104,27.255,False,True
+b2c029,Batch 2,5.2C(58%)-4C,standard,-3.508,452.0,Batch 2,605.765,34.019,False,True
+b2c030,Batch 2,5.6C(26%)-4.5C,standard,-3.185,412.0,Batch 2,598.086,45.166,False,False
+b2c031,Batch 2,5.6C(26%)-4.5C,standard,-3.352,425.0,Batch 2,552.304,29.954,False,False
+b2c032,Batch 2,4.8C(80%)-4.8C-newstructure,new,-4.131,809.0,Batch 2,1297.075,60.331,True,True
+b2c033,Batch 2,5.2C(58%)-4C-newstructure,new,-4.232,1140.0,Batch 2,1340.307,17.571,True,True
+b2c034,Batch 2,5.6C(26%)-4.5C-newstructure,new,-4.449,1186.0,Batch 2,1335.717,12.624,True,True
+b2c041,Batch 2,5.6C(26%)-4.5C,standard,-3.172,442.0,Batch 2,521.976,18.094,False,False
+b2c042,Batch 2,5.2C(50%)-4.25C,standard,-3.483,474.0,Batch 2,610.508,28.799,False,True
+b2c043,Batch 2,4.8C(80%)-4.8C-newstructure,new,-4.272,1029.0,Batch 2,1614.219,56.873,True,True
+b2c044,Batch 2,5.2C(58%)-4C-newstructure,new,-4.365,841.0,Batch 2,1547.86,84.05,True,True
+b2c045,Batch 2,5.6C(26%)-4.5C-newstructure,new,-4.175,997.0,Batch 2,1525.72,53.031,True,True
+b2c046,Batch 2,4.8C(80%)-4.8C,standard,-3.509,503.0,Batch 2,689.857,37.149,False,True
+b3c000,Batch 3,5C(67%)-4C-newstructure,new,-4.245,1009.0,Batch 3,1035.995,2.675,True,True
+b3c001,Batch 3,5.3C(54%)-4C-newstructure,new,-4.286,1063.0,Batch 3,1063.657,0.062,True,True
+b3c003,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.117,1115.0,Batch 3,883.682,-20.746,True,True
+b3c004,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.178,1048.0,Batch 3,1010.252,-3.602,True,True
+b3c005,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.114,828.0,Batch 3,792.822,-4.249,True,True
+b3c006,Batch 3,3.7C(31%)-5.9C-newstructure,new,-3.526,667.0,Batch 3,701.395,5.157,True,True
+b3c007,Batch 3,4.8C(80%)-4.8C-newstructure,new,-4.489,1836.0,Batch 3,1268.039,-30.935,True,True
+b3c008,Batch 3,5C(67%)-4C-newstructure,new,-4.092,828.0,Batch 3,881.781,6.495,True,True
+b3c009,Batch 3,5.3C(54%)-4C-newstructure,new,-3.982,1039.0,Batch 3,831.44,-19.977,True,True
+b3c010,Batch 3,4.8C(80%)-4.8C-newstructure,new,-4.411,1078.0,Batch 3,1119.855,3.883,True,True
+b3c011,Batch 3,5.6C(19%)-4.6C-newstructure,new,-3.885,817.0,Batch 3,769.04,-5.87,True,True
+b3c012,Batch 3,5.6C(36%)-4.3C-newstructure,new,-3.947,932.0,Batch 3,843.115,-9.537,True,True
+b3c013,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.094,816.0,Batch 3,909.418,11.448,True,True
+b3c014,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.0,858.0,Batch 3,876.045,2.103,True,True
+b3c015,Batch 3,5.9C(15%)-4.6C-newstructure,new,-4.001,876.0,Batch 3,845.746,-3.454,True,True
+b3c016,Batch 3,4.8C(80%)-4.8C-newstructure,new,-4.695,1638.0,Batch 3,1448.195,-11.588,True,True
+b3c017,Batch 3,5.3C(54%)-4C-newstructure,new,-4.44,1315.0,Batch 3,1154.87,-12.177,True,True
+b3c018,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.254,1146.0,Batch 3,1074.74,-6.218,True,True
+b3c019,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.172,1155.0,Batch 3,1037.642,-10.161,True,True
+b3c020,Batch 3,5C(67%)-4C-newstructure,new,-4.066,813.0,Batch 3,860.534,5.847,True,True
+b3c021,Batch 3,3.7C(31%)-5.9C-newstructure,new,-3.704,772.0,Batch 3,820.127,6.234,True,True
+b3c022,Batch 3,5.9C(60%)-3.1C-newstructure,new,-4.047,1002.0,Batch 3,786.566,-21.5,True,True
+b3c024,Batch 3,5C(67%)-4C-newstructure,new,-4.155,825.0,Batch 3,763.003,-7.515,True,True
+b3c025,Batch 3,5.3C(54%)-4C-newstructure,new,-4.147,989.0,Batch 3,876.515,-11.374,True,True
+b3c026,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.22,1028.0,Batch 3,1048.435,1.988,True,True
+b3c027,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.13,850.0,Batch 3,874.428,2.874,True,True
+b3c028,Batch 3,3.7C(31%)-5.9C-newstructure,new,-3.452,541.0,Batch 3,602.776,11.419,False,True
+b3c029,Batch 3,5.9C(15%)-4.6C-newstructure,new,-4.064,858.0,Batch 3,871.165,1.534,True,True
+b3c030,Batch 3,5.3C(54%)-4C-newstructure,new,-4.1,935.0,Batch 3,918.109,-1.807,True,True
+b3c031,Batch 3,5.9C(60%)-3.1C-newstructure,new,-3.84,731.0,Batch 3,733.249,0.308,True,True
+b3c033,Batch 3,5C(67%)-4C-newstructure,new,-4.396,1284.0,Batch 3,1101.858,-14.186,True,True
+b3c034,Batch 3,5.3C(54%)-4C-newstructure,new,-4.306,1158.0,Batch 3,1049.456,-9.373,True,True
+b3c035,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.235,1093.0,Batch 3,991.835,-9.256,True,True
+b3c036,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.253,923.0,Batch 3,970.008,5.093,True,True
+b3c038,Batch 3,5C(67%)-4C-newstructure,new,-4.342,1935.0,Batch 3,1144.44,-40.856,True,True
+b3c039,Batch 3,5.3C(54%)-4C-newstructure,new,-4.455,1156.0,Batch 3,1033.84,-10.567,True,True
+b3c040,Batch 3,5.6C(19%)-4.6C-newstructure,new,-4.295,796.0,Batch 3,1017.848,27.87,True,True
+b3c041,Batch 3,5.6C(36%)-4.3C-newstructure,new,-4.22,786.0,Batch 3,838.28,6.651,True,True
+b3c044,Batch 3,5.3C(54%)-4C-newstructure,new,-4.131,940.0,Batch 3,946.334,0.674,True,True
+b3c045,Batch 3,4.8C(80%)-4.8C-newstructure,new,-4.521,1801.0,Batch 3,1306.497,-27.457,True,True

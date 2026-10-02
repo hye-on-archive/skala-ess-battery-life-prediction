@@ -1,0 +1,10 @@
+구분,MAPE (%),비고
+Train (Batch 1 CV),7.33,정책 단위 GroupKFold 5-fold × 5회 검증 fold 평균 (표준편차 2.42)
+Valid (Batch 1 Hold-out),8.44,학습에 쓰지 않은 B1 충전 정책 5개
+Test (Batch 2),35.3,최종 필수 평가
+Gap (Train-Valid),1.11,"Valid − Train, (+) : 과적합 의심"
+Gap (Valid-Test),26.86,"Test − Valid, (+) : 배치간 일반화 저하 의심"
+Gap (Target-Test),26.2,"Test − 9.1, Target : 원논문 9.1%"
+Test (Batch 3),9.87,추가 평가 (선택)
+Gap (Batch2-Batch3),-25.43,"Batch 3 − Batch 2, Test 성능 간 비교"
+"Gap (Target-Test), Batch 3",0.77,"Batch 3 − 9.1, 원논문 성능 비교"

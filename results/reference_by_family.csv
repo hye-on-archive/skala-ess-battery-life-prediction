@@ -1,0 +1,7 @@
+family,model,feature_set,params,cv_mean,Valid MAPE,Batch 2 MAPE,Batch 3 MAPE
+M0,Median,F0_variance,,24.61,19.59,66.48,19.77
+M1,Linear,F0_variance,,10.7,6.5,24.73,12.94
+M2,ElasticNet,F1_capacity,"alpha=0.001, l1_ratio=0.9",7.33,8.44,35.3,9.87
+M3,Huber,F1_capacity,"epsilon=1.75, alpha=0.0001",7.48,8.64,35.78,9.99
+M4,GaussianProcess,F1_capacity,linear+RBF+noise,7.68,8.83,35.23,10.03
+M5,RandomForest,F1_capacity,"max_depth=None, min_leaf=2",13.15,9.73,39.98,15.51

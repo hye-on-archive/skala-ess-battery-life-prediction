@@ -1,0 +1,81 @@
+{
+  "selected": {
+    "id": "M2_ElasticNet_F1_capacity_039",
+    "family": "M2",
+    "model": "ElasticNet",
+    "feature_set": "F1_capacity",
+    "params": "alpha=0.001, l1_ratio=0.9",
+    "n_features": 3,
+    "selectable": true,
+    "cv_mean": 7.328086770569435,
+    "cv_std": 2.4238417165151698,
+    "cv_se": 0.484768343303034,
+    "complexity": 2
+  },
+  "best_cv_overall": {
+    "id": "M2_ElasticNet_F1_capacity_039",
+    "cv_mean": 7.328086770569435,
+    "cv_se": 0.484768343303034
+  },
+  "coefficients_standardized": {
+    "dq_logvar": -0.15738,
+    "qd_mean": 0.03238,
+    "qd_slope": -0.01584,
+    "intercept": 2.94692
+  },
+  "split": {
+    "holdout_policies": [
+      "4.4C(80%)-4.4C",
+      "5.4C(80%)-5.4C",
+      "6C(40%)-3.6C",
+      "6C(40%)-3C",
+      "6C(60%)-3C"
+    ],
+    "n_dev_cells": 32,
+    "n_dev_policies": 17,
+    "n_holdout_cells": 9,
+    "holdout_cells": [
+      "b1c005",
+      "b1c020",
+      "b1c021",
+      "b1c024",
+      "b1c025",
+      "b1c026",
+      "b1c027",
+      "b1c032",
+      "b1c033"
+    ],
+    "n_test_b2": 39,
+    "n_test_b3": 40,
+    "n_cv_folds": 25,
+    "seed": 42
+  },
+  "target_mape": 9.1,
+  "metrics": {
+    "Batch 2": {
+      "n": 39,
+      "MAPE": 35.29670412272877,
+      "MAE": 210.32978908843162,
+      "RMSE": 269.97277620081786,
+      "bias_pct": 35.29670412272877,
+      "over_share": 100.0
+    },
+    "Batch 3": {
+      "n": 40,
+      "MAPE": 9.867959339429248,
+      "MAE": 120.14070811730444,
+      "RMSE": 199.73019682965648,
+      "bias_pct": -4.752200971451527,
+      "over_share": 45.0
+    },
+    "Valid": {
+      "n": 9,
+      "MAPE": 8.436206209576753,
+      "MAE": 63.58653284576413,
+      "RMSE": 80.8591843563578,
+      "bias_pct": 2.1719228168062505,
+      "over_share": 44.44444444444444
+    }
+  },
+  "runtime_sec": 31.3
+}
